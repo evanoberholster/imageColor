@@ -1,4 +1,4 @@
-# Color
+# imageColor
 
 [![License][License-Image]][License-Url]
 [![Godoc][Godoc-Image]][Godoc-Url]
