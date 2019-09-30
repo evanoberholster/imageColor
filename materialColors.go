@@ -1,0 +1,188 @@
+package color
+
+// Material Color Series
+const (
+	materialRed MaterialColor = iota
+	materialPink
+	materialPurple
+	materialDeepPurple
+	materialIndigo
+	materialBlue
+	materialLightBlue
+	materialCyan
+	materialTeal
+	materialGreen
+	materialLightGreen
+	materialLime
+	materialYellow
+	materialAmber
+	materialOrange
+	materialDeepOrange
+	materialBrown
+	materialGrey
+	materialBlueGrey
+	materialWhite
+	materialBlack
+)
+
+// MaterialColor -
+type MaterialColor uint16
+
+// String - format MaterialColor as a String
+func (mc MaterialColor) String() string {
+	return materialColorsName[mc]
+}
+
+var (
+	materialColorsSeries = map[int]map[MaterialColor]ColorHSL{
+		100: materialColors100Series,
+		300: materialColors300Series,
+		500: materialColors500Series,
+		700: materialColors700Series,
+		900: materialColors900Series,
+	}
+
+	// material Colors 100 Series
+	// Retrieved from: https://materialuicolors.co/
+	materialColors100Series = map[MaterialColor]ColorHSL{
+		materialRed:        ColorHSL{354.000000000000000, 1.000000000000000, 0.901960784313726},
+		materialIndigo:     ColorHSL{231.666666666666686, 0.450000000000000, 0.843137254901961},
+		materialBlue:       ColorHSL{207.187500000000000, 0.888888888888889, 0.858823529411765},
+		materialAmber:      ColorHSL{45.000000000000014, 1.000000000000000, 0.850980392156863},
+		materialBlueGrey:   ColorHSL{198.461538461538510, 0.156626506024097, 0.837254901960784},
+		materialPurple:     ColorHSL{291.219512195121922, 0.460674157303371, 0.825490196078431},
+		materialGreen:      ColorHSL{122.000000000000000, 0.375000000000000, 0.843137254901961},
+		materialOrange:     ColorHSL{35.844155844155843, 1.000000000000000, 0.849019607843137},
+		materialDeepOrange: ColorHSL{14.328358208955226, 1.000000000000000, 0.868627450980392},
+		materialBrown:      ColorHSL{16.000000000000053, 0.157894736842105, 0.813725490196078},
+		materialPink:       ColorHSL{339.344262295081990, 0.813333333333334, 0.852941176470588},
+		materialLightBlue:  ColorHSL{198.904109589041099, 0.924050632911393, 0.845098039215686},
+		materialTeal:       ColorHSL{174.666666666666657, 0.412844036697248, 0.786274509803922},
+		materialLime:       ColorHSL{64.897959183673450, 0.690140845070422, 0.860784313725490},
+		materialYellow:     ColorHSL{53.898305084745758, 1.000000000000000, 0.884313725490196},
+		materialGrey:       ColorHSL{0.000000000000000, 0.000000000000000, 0.960784313725490},
+		materialDeepPurple: ColorHSL{261.081081081081095, 0.456790123456790, 0.841176470588235},
+		materialCyan:       ColorHSL{186.562500000000000, 0.711111111111111, 0.823529411764706},
+		materialLightGreen: ColorHSL{87.567567567567551, 0.506849315068493, 0.856862745098039},
+	}
+
+	// materialColors300Series
+	// Retrieved from: https://materialuicolors.co/
+	materialColors300Series = map[MaterialColor]ColorHSL{
+		materialBlue:       ColorHSL{206.712328767123267, 0.890243902439024, 0.678431372549020},
+		materialGreen:      ColorHSL{122.571428571428555, 0.384615384615385, 0.643137254901961},
+		materialOrange:     ColorHSL{35.730337078651687, 1.000000000000000, 0.650980392156863},
+		materialBrown:      ColorHSL{15.882352941176467, 0.153153153153153, 0.564705882352941},
+		materialBlueGrey:   ColorHSL{200.000000000000028, 0.156250000000000, 0.623529411764706},
+		materialRed:        ColorHSL{0.000000000000000, 0.686746987951807, 0.674509803921569},
+		materialDeepPurple: ColorHSL{261.818181818181813, 0.468085106382979, 0.631372549019608},
+		materialLightBlue:  ColorHSL{198.571428571428584, 0.913043478260870, 0.639215686274510},
+		materialLightGreen: ColorHSL{87.857142857142861, 0.500000000000000, 0.670588235294118},
+		materialTeal:       ColorHSL{174.285714285714306, 0.418326693227092, 0.507843137254902},
+		materialLime:       ColorHSL{65.789473684210520, 0.703703703703703, 0.682352941176471},
+		materialYellow:     ColorHSL{53.868613138686129, 1.000000000000000, 0.731372549019608},
+		materialAmber:      ColorHSL{45.681818181818180, 1.000000000000000, 0.654901960784314},
+		materialDeepOrange: ColorHSL{14.415584415584412, 1.000000000000000, 0.698039215686274},
+		materialPink:       ColorHSL{339.718309859154942, 0.825581395348837, 0.662745098039216},
+		materialPurple:     ColorHSL{291.250000000000000, 0.466019417475728, 0.596078431372549},
+		materialIndigo:     ColorHSL{230.487804878048763, 0.440860215053763, 0.635294117647059},
+		materialCyan:       ColorHSL{186.891891891891902, 0.711538461538461, 0.592156862745098},
+		materialGrey:       ColorHSL{0.000000000000000, 0.000000000000000, 0.878431372549020},
+	}
+
+	// material Colors 500 Series
+	// Retrieved from: https://materialuicolors.co/
+	materialColors500Series = map[MaterialColor]ColorHSL{
+		materialOrange:     ColorHSL{35.764705882352942, 1.000000000000000, 0.500000000000000},
+		materialPink:       ColorHSL{339.605911330049253, 0.821862348178138, 0.515686274509804},
+		materialBlue:       ColorHSL{206.571428571428584, 0.897435897435897, 0.541176470588235},
+		materialCyan:       ColorHSL{186.792452830188665, 1.000000000000000, 0.415686274509804},
+		materialGreen:      ColorHSL{122.424242424242408, 0.394422310756972, 0.492156862745098},
+		materialLime:       ColorHSL{65.521472392638032, 0.699570815450644, 0.543137254901961},
+		materialYellow:     ColorHSL{53.877551020408170, 1.000000000000000, 0.615686274509804},
+		materialAmber:      ColorHSL{45.000000000000000, 1.000000000000000, 0.513725490196078},
+		materialRed:        ColorHSL{4.105263157894739, 0.896226415094339, 0.584313725490196},
+		materialIndigo:     ColorHSL{230.847457627118644, 0.483606557377049, 0.478431372549020},
+		materialTeal:       ColorHSL{174.400000000000006, 1.000000000000000, 0.294117647058824},
+		materialGrey:       ColorHSL{0.000000000000000, 0.000000000000000, 0.619607843137255},
+		materialDeepPurple: ColorHSL{261.600000000000023, 0.518672199170125, 0.472549019607843},
+		materialLightBlue:  ColorHSL{198.672199170124458, 0.975708502024292, 0.484313725490196},
+		materialLightGreen: ColorHSL{87.768595041322314, 0.502074688796680, 0.527450980392157},
+		materialDeepOrange: ColorHSL{14.389140271493213, 1.000000000000000, 0.566666666666667},
+		materialBrown:      ColorHSL{15.918367346938773, 0.253886010362694, 0.378431372549020},
+		materialBlueGrey:   ColorHSL{199.534883720930225, 0.182978723404255, 0.460784313725490},
+		materialPurple:     ColorHSL{291.240875912408740, 0.637209302325581, 0.421568627450980},
+	}
+
+	// material Colors 700 Series
+	// Retrieved from: https://materialuicolors.co/
+	materialColors700Series = map[MaterialColor]ColorHSL{
+		materialPink:       ColorHSL{336.352941176470608, 0.779816513761468, 0.427450980392157},
+		materialGreen:      ColorHSL{122.790697674418610, 0.434343434343434, 0.388235294117647},
+		materialLightGreen: ColorHSL{92.038834951456309, 0.479069767441860, 0.421568627450980},
+		materialBrown:      ColorHSL{14.210526315789471, 0.256756756756757, 0.290196078431373},
+		materialCyan:       ColorHSL{185.748502994011972, 1.000000000000000, 0.327450980392157},
+		materialTeal:       ColorHSL{173.057851239669418, 1.000000000000000, 0.237254901960784},
+		materialOrange:     ColorHSL{30.367346938775508, 1.000000000000000, 0.480392156862745},
+		materialDeepPurple: ColorHSL{257.560975609756099, 0.577464788732394, 0.417647058823529},
+		materialIndigo:     ColorHSL{231.891891891891902, 0.536231884057971, 0.405882352941176},
+		materialYellow:     ColorHSL{42.815533980582515, 0.962616822429907, 0.580392156862745},
+		materialDeepOrange: ColorHSL{14.341463414634145, 0.803921568627451, 0.500000000000000},
+		materialBlueGrey:   ColorHSL{199.354838709677438, 0.183431952662722, 0.331372549019608},
+		materialRed:        ColorHSL{0.000000000000000, 0.650793650793651, 0.505882352941176},
+		materialPurple:     ColorHSL{282.137404580152634, 0.678756476683938, 0.378431372549020},
+		materialBlue:       ColorHSL{209.837837837837839, 0.787234042553192, 0.460784313725490},
+		materialLightBlue:  ColorHSL{201.159420289855063, 0.981042654028436, 0.413725490196078},
+		materialLime:       ColorHSL{62.189781021897801, 0.614349775784753, 0.437254901960784},
+		materialAmber:      ColorHSL{37.647058823529413, 1.000000000000000, 0.500000000000000},
+		materialGrey:       ColorHSL{0.000000000000000, 0.000000000000000, 0.380392156862745},
+	}
+
+	// material Colors 900 Series
+	// Retrieved from: https://materialuicolors.co/
+	materialColors900Series = map[MaterialColor]ColorHSL{
+		materialPurple:     ColorHSL{267.000000000000000, 0.750000000000000, 0.313725490196078},
+		materialLime:       ColorHSL{53.831775700934585, 0.699346405228758, 0.300000000000000},
+		materialAmber:      ColorHSL{26.117647058823529, 1.000000000000000, 0.500000000000000},
+		materialGrey:       ColorHSL{0.000000000000000, 0.000000000000000, 0.129411764705882},
+		materialYellow:     ColorHSL{28.108108108108109, 0.917355371900827, 0.525490196078431},
+		materialPink:       ColorHSL{328.032786885245912, 0.813333333333333, 0.294117647058824},
+		materialDeepPurple: ColorHSL{251.092436974789933, 0.687861271676301, 0.339215686274510},
+		materialIndigo:     ColorHSL{234.600000000000023, 0.657894736842105, 0.298039215686275},
+		materialBlue:       ColorHSL{216.486486486486484, 0.850574712643678, 0.341176470588235},
+		materialCyan:       ColorHSL{182.400000000000006, 1.000000000000000, 0.196078431372549},
+		materialTeal:       ColorHSL{169.870129870129887, 1.000000000000000, 0.150980392156863},
+		materialLightGreen: ColorHSL{103.200000000000003, 0.555555555555555, 0.264705882352941},
+		materialOrange:     ColorHSL{21.130434782608695, 1.000000000000000, 0.450980392156863},
+		materialRed:        ColorHSL{0.000000000000000, 0.734597156398104, 0.413725490196078},
+		materialLightBlue:  ColorHSL{206.493506493506487, 0.987179487179487, 0.305882352941176},
+		materialDeepOrange: ColorHSL{14.078212290502794, 0.881773399014778, 0.398039215686275},
+		materialGreen:      ColorHSL{124.477611940298502, 0.553719008264463, 0.237254901960784},
+		materialBrown:      ColorHSL{8.888888888888889, 0.278350515463917, 0.190196078431373},
+		materialBlueGrey:   ColorHSL{200.000000000000000, 0.191489361702128, 0.184313725490196},
+	}
+
+	materialColorsName = map[MaterialColor]string{
+		materialRed:        "Red",
+		materialPink:       "Pink",
+		materialPurple:     "Purple",
+		materialDeepPurple: "DeepPurple",
+		materialIndigo:     "Indigo",
+		materialBlue:       "Blue",
+		materialLightBlue:  "LightBlue",
+		materialCyan:       "Cyan",
+		materialTeal:       "Teal",
+		materialGreen:      "Green",
+		materialLightGreen: "LightGreen",
+		materialLime:       "Lime",
+		materialYellow:     "Yellow",
+		materialAmber:      "Amber",
+		materialOrange:     "Orange",
+		materialDeepOrange: "DeepOrange",
+		materialBrown:      "Brown",
+		materialGrey:       "Grey",
+		materialBlueGrey:   "BlueGrey",
+		materialWhite:      "White",
+		materialBlack:      "Black",
+	}
+)
