@@ -1,4 +1,4 @@
-package imageColor
+package imagecolor
 
 // Material Color Series
 const (

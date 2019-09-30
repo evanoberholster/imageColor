@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/evanoberholster/imageColor"
+	imagecolor "github.com/evanoberholster/imageColor"
 	"github.com/nfnt/resize"
 )
 
@@ -35,7 +35,7 @@ func main() {
 	imgR := resize.Resize(0, 250, img, resize.Lanczos3)
 
 	start := time.Now()
-	ic := imageColor.GetImageColors(imgR)
+	ic := imagecolor.GetImageColors(imgR)
 	fmt.Println(time.Since(start))
 
 	start = time.Now()

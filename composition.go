@@ -1,4 +1,4 @@
-package imageColor
+package imagecolor
 
 // Experimental
 // Use with caution
