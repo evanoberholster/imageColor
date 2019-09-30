@@ -20,3 +20,4 @@ see example/main.go
 [Godoc-Image]: https://godoc.org/github.com/evanoberholster/imageColor?status.svg
 [Godoc-Image]: https://godoc.org/github.com/evanoberholster/imageColor?status.svg
 [ReportCard-Url]: https://goreportcard.com/report/github.com/evanoberholster/imageColor
+[ReportCard-Image]: https://goreportcard.com/badge/github.com/evanoberholster/imageColor
