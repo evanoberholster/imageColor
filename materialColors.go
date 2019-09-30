@@ -26,7 +26,7 @@ const (
 )
 
 // MaterialColor -
-type MaterialColor uint16
+type MaterialColor uint8
 
 // String - format MaterialColor as a String
 func (mc MaterialColor) String() string {
