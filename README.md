@@ -16,6 +16,10 @@ see example/main.go
 
 ## LICENSE
 
+Copyright (c) 2019, Evan Oberholster & Contributors
+
+BSD-2-Clause License
+
 [License-Url]: https://opensource.org/licenses/BSD-2-Clause
 [License-Image]: https://img.shields.io/badge/license-2%20Clause%20BSD-blue.svg?maxAge=2592000
 [Godoc-Url]: https://godoc.org/github.com/evanoberholster/imageColor
