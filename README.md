@@ -3,6 +3,8 @@
 [![License][License-Image]][License-Url]
 [![Godoc][Godoc-Image]][Godoc-Url]
 [![ReportCard][ReportCard-Image]][ReportCard-Url]
+[![Coverage Status](https://coveralls.io/repos/github/evanoberholster/imageColor/badge.svg?branch=master)](https://coveralls.io/github/evanoberholster/imageColor?branch=master)
+[![Build][Build-Status-Image]][Build-Status-Url]
 
 ## Work in Progress
 
@@ -21,3 +23,5 @@ see example/main.go
 [Godoc-Image]: https://godoc.org/github.com/evanoberholster/imageColor?status.svg
 [ReportCard-Url]: https://goreportcard.com/report/github.com/evanoberholster/imageColor
 [ReportCard-Image]: https://goreportcard.com/badge/github.com/evanoberholster/imageColor
+[Build-Status-Url]: https://travis-ci.com/evanoberholster/imageColor?branch=master
+[Build-Status-Image]: https://travis-ci.com/evanoberholster/imageColor.svg?branch=master
