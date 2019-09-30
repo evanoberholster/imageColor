@@ -70,7 +70,6 @@ A image hashing library written in Go. ImageHash supports:
 * [Gustavo Brunoro](https://github.com/brunoro/) git@hitnail.net
 * [Alex Higashino](https://github.com/TokyoWolFrog/) TokyoWolFrog@mayxyou.com
 
-
 ## LICENSE
 
 BSD 2-Clause License
