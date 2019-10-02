@@ -102,17 +102,20 @@ func calcColors(wg *sync.WaitGroup, ic *ImageColors, limit float64, pc *Prominen
 	totalColors := 0
 	var name MaterialColor
 	result := make(map[MaterialColor]int)
+
+	for name := range materialColorsName {
+		result[name] = 0
+	}
+
 	for _, x := range *ic {
 		for _, c1 := range x {
 			name = closestMaterialColor(c1)
-			_, ok := result[name]
-			if ok {
-				result[name]++
-			} else {
-				result[name] = 1
-			}
-			totalColors++
+			result[name]++
+			//totalColors++
 		}
+	}
+	for _, w := range result {
+		totalColors += w
 	}
 	for name, num := range result {
 		w := float64(num) / float64(totalColors)

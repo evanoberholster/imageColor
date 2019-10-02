@@ -28,11 +28,11 @@ func loadImage(fileName string) (image.Image, error) {
 }
 
 func main() {
-	img, err := loadImage("../../test/img/8.jpg")
+	img, err := loadImage("../../test/img/10.jpg")
 	if err != nil {
 		panic(err)
 	}
-	imgR := resize.Resize(0, 250, img, resize.Lanczos3)
+	imgR := resize.Resize(256, 256, img, resize.Lanczos3)
 
 	start := time.Now()
 	ic := imagecolor.GetImageColors(imgR)
@@ -43,12 +43,12 @@ func main() {
 	//fmt.Printf("Hue\t\t Avg: %.2f\t Std: %.2f\n", m, std)
 
 	pc := ic.ProminentColors(0.01)
-	fmt.Printf("Lightness\t Avg: %.2f\t Std: %.2f\n", pc.Lightness[0]*100, pc.Lightness[1]*100)
-	fmt.Printf("Saturation\t Avg: %.2f\t Std: %.2f\n", pc.Saturation[0]*100, pc.Saturation[1]*100)
-	fmt.Printf("Colorfulness\t %.2f\n", pc.Colorfulness*100)
-	fmt.Printf("Quantile light\t %.2f\n", pc.Qlightness*100)
+	//fmt.Printf("Lightness\t Avg: %.2f\t Std: %.2f\n", pc.Lightness[0]*100, pc.Lightness[1]*100)
+	//fmt.Printf("Saturation\t Avg: %.2f\t Std: %.2f\n", pc.Saturation[0]*100, pc.Saturation[1]*100)
+	//fmt.Printf("Colorfulness\t %.2f\n", pc.Colorfulness*100)
+	//fmt.Printf("Quantile light\t %.2f\n", pc.Qlightness*100)
 	fmt.Println(pc.Colors)
-	fmt.Println(time.Since(start))
+	fmt.Println("Time Since Start", time.Since(start))
 
 	//start = time.Now()
 	//color.CalcCompositionBoxes(img)
