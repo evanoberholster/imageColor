@@ -12,7 +12,7 @@ import (
 	"image"
 	"math"
 
-	"github.com/corona10/goimagehash/transforms"
+	"github.com/evanoberholster/imagecolor/hash/transforms"
 )
 
 // Errors
