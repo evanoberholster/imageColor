@@ -259,12 +259,12 @@ func NewColorHSL(cf colorful.Color) ColorHSL {
 func newColorful(r, g, b, a uint32) colorful.Color {
 	// Since color.Color is alpha pre-multiplied, we need to divide the
 	// RGB values by alpha again in order to get back the original RGB.
-	r *= 0xffff
-	r /= a
-	g *= 0xffff
-	g /= a
-	b *= 0xffff
-	b /= a
+	//r *= 0xffff
+	//r /= a
+	//g *= 0xffff
+	//g /= a
+	//b *= 0xffff
+	//b /= a
 
 	return colorful.Color{R: float64(r) / 65535.0, G: float64(g) / 65535.0, B: float64(b) / 65535.0}
 }
